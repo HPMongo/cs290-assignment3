@@ -12,9 +12,9 @@
 * @return {null} - 'useless'.
 */
 
-//your code here
-
-//end your code
+function uselessFunction() {
+	return null;
+}
 
 var bar = 'not a function';
 var barType = typeof bar;
@@ -29,9 +29,15 @@ var barType = typeof bar;
 * This should return false if any value in the array cannot be doubled.
 */
 
-//your code here
-
-//end your code
+bar = function doubleVal (doubleArray) {
+	for(i = 0; i<doubleArray.length ; i++) {
+		if(typeof doubleArray[i] !== 'number')
+			return false;
+		else
+			doubleArray[i] *= 2;
+	}
+	return true;
+}
 
 /**
 * Creates a new GitLog
@@ -66,5 +72,23 @@ function GitLog(hash, date, message) {
 */
 
 //your code here
-
+function parseGit(inputArray) {
+	var newLog = [];
+	for(var h = 0; h < inputArray.length; h++) {
+    	var res = inputArray[h].split(" ");
+    	var spc = " ";
+    	var pHash = res[0];
+    	var pDate = res[1] + spc + res[2] + spc + res[3] + spc + res[4] + spc + res[5] + spc + res[6];
+    	var pMsg = "";
+    	for (var i = 7; i<res.length; i++) {
+        	pMsg += res[i] + spc;
+    	}
+     	pMsg = pMsg.replace("\"", "");
+     	pMsg = pMsg.replace("\" ", "");
+    	var newMsg = new GitLog(pHash, pDate, pMsg);
+    	newLog[h] = newMsg;
+	}
+	return newLog;
+}
 //end your code
+
