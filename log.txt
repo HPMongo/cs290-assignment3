@@ -5,3 +5,7 @@ Tasks: During this period, I created the new repo in GitHub and cloned it to the
 Start: Thu, 23 Apr 2015 21:01:05 -0500
 End: Fri, 24 Apr 2015 00:05:12 -0500 
 Tasks: Update function.js. First two function worked correctly. For parseGit, 5 test cases passed and 2 failed. Will work on the remaing test case tomorrow.
+
+Start: Sat, 25 Apr 2015 08:15:00 -0500
+End: Sat, 25 Apr 2015 10:59:14 -0500 
+Tasks: Update objects.js and pass all tests. 
