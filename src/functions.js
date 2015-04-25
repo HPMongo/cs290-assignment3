@@ -78,7 +78,8 @@ function parseGit(inputArray) {
     	var res = inputArray[h].split(" ");
     	var spc = " ";
     	var pHash = res[0];
-    	var pDate = res[1] + spc + res[2] + spc + res[3] + spc + res[4] + spc + res[5] + spc + res[6];
+    	var inDate = res[1] + spc + res[2] + spc + res[3] + spc + res[4] + spc + res[5] + spc + res[6];
+    	var pDate = new Date(inDate);
     	var pMsg = "";
     	for (var i = 7; i<res.length; i++) {
         	pMsg += res[i] + spc;
